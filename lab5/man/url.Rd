@@ -2,10 +2,10 @@
 \alias{url}
 \docType{data}
 \title{
-A Capitalized Title for the Data Set
+A Data Set
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of the dataset. ~~
+ A data address
 }
 \usage{data("url")}
 \format{

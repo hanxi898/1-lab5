@@ -2,10 +2,10 @@
 \alias{response}
 \docType{data}
 \title{
-A Capitalized Title for the Data Set
+A Data Set
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of the dataset. ~~
+The response you get when you make a request.
 }
 \usage{data("response")}
 \format{

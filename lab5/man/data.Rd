@@ -1,28 +1,32 @@
 \name{data}
 \alias{data}
 \docType{data}
-\title{
-A Capitalized Title for the Data Set
-}
+\title{A Data Set}
 \description{
-%%  ~~ A concise (1-5 lines) description of the dataset. ~~
+  This dataset contains information obtained from a web API. It includes key performance indicators (KPIs) and data for various municipalities.
 }
 \usage{data("data")}
 \format{
-  The format is:
- chr "{\"count\": 3627, \"values\": [{\"kpi\": \"N00945\", \"municipality\": \"0000\", \"period\": 2021, \"values\": "| __truncated__
+  A character string in JSON format. The structure includes:
+  \describe{
+    \item{count}{The total count of records.}
+    \item{values}{A list of records, where each record contains the following fields: \code{kpi}, \code{municipality}, \code{period}, and \code{values}.}
+  }
 }
 \details{
-%%  ~~ If necessary, more details than the __description__ above ~~
+  The dataset is useful for analyzing municipal performance indicators over time.
 }
 \source{
-%%  ~~ reference to a publication or URL from which the data were obtained ~~
+  Data obtained from the Kolada API. For more information, visit \url{https://www.kolada.se}.
 }
 \references{
-%%  ~~ possibly secondary sources and usages ~~
+  Kolada (2021). Municipal performance indicators. Retrieved from \url{https://www.kolada.se}.
 }
 \examples{
-data(data)
-## maybe str(data) ; plot(data) ...
+  data(data)
+  # Display the structure of the dataset
+  str(data) 
+  # Optionally, you can plot the data
+  # plot(data)
 }
 \keyword{datasets}
