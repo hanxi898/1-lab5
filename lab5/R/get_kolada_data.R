@@ -15,17 +15,24 @@ get_kolada_data <- function(year) {
   }
   
   url <- paste0("https://api.kolada.se/v2/data/kpi/N00945/year/", year)
-  response <- GET(url)
+  print(paste("Fetching data from URL:", url))  
+  response <- GET(url)  
+  
   
   if (status_code(response) == 200) {
-    data <- content(response, as = "text", encoding = "UTF-8")
-    json_data <- fromJSON(data)
-    if (is.null(json_data) || length(json_data) == 0) {
-      stop("Failed to fetch data. The response is empty.")
-    }
+    data <- content(response, as = "text", encoding = "UTF-8")  
+    json_data <- fromJSON(data)  
     
-    return(json_data)
+  
+    print(json_data)
+    
+    return(json_data)  
   } else {
-    stop("Failed to fetch data. Status code: ", status_code(response))
+
+    stop("Failed to fetch data. Status code: ", status_code(response))  
   }
 }
+
+result <- get_kolada_data(2021)
+
+print(result)
