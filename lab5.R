@@ -70,3 +70,4 @@ build_vignettes()  # 这将生成 vignette 的 HTML 文件
 
 getwd()
 setwd("D:/1-lab5/lab5")
+url <- paste0("https://api.kolada.se/v2/data/kpi/N00945/year/", year)

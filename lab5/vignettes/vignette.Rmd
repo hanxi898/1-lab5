@@ -21,6 +21,8 @@ The **lab5** package provides functions for fetching data from the Kolada API. K
 ```{r setup}
 
 library(lab5)
+library(httr)
+library(jsonlite)
 ```
 1. get_api: Fetch Data Based on a Search Term
 get_api(search, api_key)
@@ -31,3 +33,13 @@ This function allows you to search for specific terms in the Kolada database and
 get_kolada_data(year)
 
 This function retrieves data for a specified year (between 1900 and 2100) from the Kolada API.
+For example:
+
+# Fetch data for the year 2021
+data_2021 <- get_kolada_data(2021)
+
+# Display a summary of the data
+print(data_2021)
+
+# Example of an invalid year
+invalid_data <- get_kolada_data(1899)  # This will stop with an error
