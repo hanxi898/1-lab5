@@ -23,9 +23,6 @@ get_kolada_data <- function(year) {
     data <- content(response, as = "text", encoding = "UTF-8")  
     json_data <- fromJSON(data)  
     
-  
-    print(json_data)
-    
     return(json_data)  
   } else {
 
@@ -33,6 +30,3 @@ get_kolada_data <- function(year) {
   }
 }
 
-result <- get_kolada_data(2021)
-
-print(result)

@@ -14,7 +14,20 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 ```
+# Introduction
+
+The **lab5** package provides functions for fetching data from the Kolada API. Kolada is a Swedish open data platform that offers various datasets for research, policy-making, and public information. With this package, you can easily retrieve data from Kolada by either searching for specific terms or fetching data for a given year.
 
 ```{r setup}
+
 library(lab5)
 ```
+1. get_api: Fetch Data Based on a Search Term
+get_api(search, api_key)
+
+This function allows you to search for specific terms in the Kolada database and fetch the corresponding data. You will need an API key to use this function.
+
+2. get_kolada_data: Fetch Data for a Specific Year
+get_kolada_data(year)
+
+This function retrieves data for a specified year (between 1900 and 2100) from the Kolada API.
