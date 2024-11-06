@@ -34,7 +34,7 @@ get_kolada_data(year)
 
 This function retrieves data for a specified year (between 1900 and 2100) from the Kolada API.
 For example:
-
+```{r example}
 # Fetch data for the year 2021
 data_2021 <- get_kolada_data(2021)
 
@@ -43,3 +43,4 @@ print(data_2021)
 
 # Example of an invalid year
 invalid_data <- get_kolada_data(1899)  # This will stop with an error
+```

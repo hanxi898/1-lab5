@@ -56,18 +56,20 @@ install.packages("usethis")
 library(usethis)
 
 use_github_action("check-standard")
-# 如果没有安装 devtools，请先安装
+
 install.packages("devtools")
 
-# 加载 devtools 包
+devtools::install_github("hanxi898/1-lab5")
+
 library(devtools)
 
-# 更新文档
-document()  # 这将生成 NAMESPACE 文件和 Rd 文档
 
-# 创建 vignette
-build_vignettes()  # 这将生成 vignette 的 HTML 文件
+document()  
+
+
+build_vignettes()  
 
 getwd()
 setwd("D:/1-lab5/lab5")
 url <- paste0("https://api.kolada.se/v2/data/kpi/N00945/year/", year)
+
